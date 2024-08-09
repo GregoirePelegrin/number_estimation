@@ -20,3 +20,7 @@ class Estimator:
     @staticmethod
     def my_estimate(observations: np.ndarray) -> float:
         return 2 * observations.mean()
+
+    @staticmethod
+    def minimum_variance_unbiased_estimate(observations: np.ndarray) -> float:
+        return (1 + 1./observations.size) * observations.max() - 1
